@@ -1,0 +1,18 @@
+footer {
+  background-color: #333; /* Reverting to original background color */
+  color: #fff; /* Reverting to original text color */
+  text-align: center;
+  padding: 1rem;
+  border-top: 1px solid #333; /* Adjusting border color */
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  footer {
+    padding: 0.5rem;
+    font-size: 0.8rem;
+  }
+}

@@ -1,0 +1,41 @@
+.contact-me-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background-color: #121212;
+  color: #ffffff;
+  min-height: 100vh;
+}
+
+h1 {
+  color: #ffffff;
+  margin-bottom: 2rem;
+}
+
+.contact-icons {
+  display: flex;
+  gap: 2rem;
+}
+
+.contact-icon {
+  color: #ffffff;
+  font-size: 3rem;
+  transition: color 0.3s ease;
+}
+
+.contact-icon:hover {
+  color: #1e90ff;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .contact-icons {
+    flex-direction: column;
+  }
+
+  .contact-icon {
+    font-size: 2rem;
+  }
+}
