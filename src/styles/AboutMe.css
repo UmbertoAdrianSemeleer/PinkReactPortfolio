@@ -1,51 +1,73 @@
+/* Container for the whole About Me section */
 .about-me-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem;
-  background-color: #121212;
-  color: #ffffff;
-  min-height: 100vh;
+  display: flex; /* Flexbox layout */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  padding: 2rem; /* Padding around the content */
+  background-color: #121212; /* Dark background color */
+  color: #ffffff; /* White text color */
+  min-height: 100vh; /* Minimum height to fill the viewport */
 }
 
+/* Container for the photo and text content */
 .about-me-content {
-  width: 50%;
-  max-width: 1200px;
-  text-align: left;
+  width: 80%; /* 80% of the container's width */
+  max-width: 1200px; /* Maximum width */
 }
 
+/* Container for the photo and text side by side */
 .my-photo-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #1e1e1e;
-  padding: 1rem;
-  border: 1px solid #ff66b2;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  margin-bottom: 1rem;
+  display: flex; /* Flexbox layout */
+  flex-direction: row; /* Arrange items in a row */
+  align-items: flex-start; /* Align items at the start */
+  background-color: #1e1e1e; /* Slightly lighter dark background */
+  padding: 1rem; /* Padding inside the container */
+  border: 1px solid #ff66b2; /* Border color */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
 }
 
+/* Styling for the photo */
 .my-photo {
-  border-radius: 10px;
-  max-width: 25%;
-  height: auto;
-  object-fit: cover;
+  border-radius: 10px; /* Rounded corners */
+  width: 50%; /* 50% of the container's width */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Cover the area while maintaining aspect ratio */
+  margin-right: 2rem; /* Margin to the right for spacing */
 }
 
+/* Styling for the text content */
+.text-content {
+  flex: 1; /* Take up the remaining space */
+  color: #ffffff; /* White text color */
+}
+
+/* Styling for the heading */
 h1 {
-  color: #6a0dad;
-  margin-bottom: 1rem;
+  color: #6a0dad; /* Purple color for the heading */
+  margin-bottom: 1rem; /* Space below the heading */
 }
 
+/* Styling for the paragraphs */
 p {
-  color: #b0b0b0;
-  margin-bottom: 1rem;
+  color: #b0b0b0; /* Light gray color for the text */
+  margin-bottom: 1rem; /* Space below each paragraph */
 }
 
-/* Media Queries for Responsiveness */
+/* Media queries for responsiveness */
 @media (max-width: 768px) {
-  .about-me-content {
-    padding: 1rem;
+  .my-photo-container {
+    flex-direction: column; /* Stack items vertically on small screens */
+    text-align: center; /* Center text on small screens */
+  }
+
+  .my-photo {
+    margin-right: 0; /* Remove right margin on small screens */
+    margin-bottom: 1rem; /* Add bottom margin on small screens */
+    width: 100%; /* Make image full width in mobile view */
+  }
+
+  .text-content {
+    padding: 0 1rem; /* Padding for text content on small screens */
   }
 }
